@@ -1,0 +1,132 @@
+:root{
+    --second-color: rgb(214, 214, 214);
+    --primary-color: #001f4d;
+    --border-color: #002c6e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    min-width: 800px;
+    min-height: 900px;
+    overflow: auto;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    color: var(--second-color);
+}
+
+.container {
+    height: 100%;
+    background-color: var(--primary-color);
+    position: relative;
+}
+
+#name {
+    text-align: center;
+    font-size: 60px;
+    padding-top: 60px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.game-items {
+    width: 550px;
+    height: 350px;
+
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 35px 6px rgba(0,0,0,0.75);
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-style {
+    height: 40px;
+    width: 100px;
+    
+    background-color: var(--second-color);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+}
+
+.answer-container,
+.enter-number-container,
+.show-number-container,
+.start-game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.drawn-number,
+.start-text {
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+
+.progress-bar {
+    background-color: var(--primary-color);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    margin-top: 10px;
+    width: 150px;
+    opacity: 1;
+}
+
+.progress {
+    border-radius: 20px;
+    height: 10px;
+    width: 150px;
+    background-color:var(--second-color);
+}
+
+.enter-number-field {
+    background-color: var(--second-color);
+    height: 50px;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.answer-container p,
+.answer-container p {
+    margin-bottom: 10px;
+    font-size: 23px;
+}
+
+.correct-answer,
+.user-answer {
+    font-size: 25px;
+    font-weight: bolder;
+    margin-bottom: 15px;
+}
+
+.level {
+    margin-bottom: 5px;
+}
+
+
+.hidden { 
+    display: none;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}

@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8"/>
+        <Title>Number Memory</Title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <p id="name">Number Memory</p>
+            <div class="game-items">
+
+                <div class="start-game-container">
+                    <p class="start-text">Start the game</p>
+                    <button class="button-style start-btn" autofocus>START</button>
+                </div>
+
+                <div class="show-number-container hidden">
+                    <p class="drawn-number"></p>
+
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                </div>
+
+                <div class="enter-number-container hidden">
+                    <input type="number" class="enter-number-field">
+                    <button class="button-style confirm-answer-btn">Confirm</button>
+                </div>
+
+                <div class="answer-container hidden">
+                    <h2 class="level"></h2>
+                    <p>Correct answer:</p>
+                    <p class="correct-answer"></p>
+                    <p>Your answer:</p>
+                    <p class="user-answer"></p>
+                    <button class="button-style next-level-btn hidden">Next level</button>
+                    <button class="button-style try-again-btn hidden">Try again</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
