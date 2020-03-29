@@ -54,9 +54,9 @@ function checkCorrectAnwer(){
 
     correctAnswerP.textContent = drawnNumber;
     userAnswerP.textContent = userAnswer;
+
     enterNumberContainer.classList.add("hidden");
     answerContainer.classList.remove("hidden");
-
     levelP.textContent = "LEVEL " + level;
     inputNumber.value = "";
 
@@ -67,7 +67,9 @@ function checkCorrectAnwer(){
         nextLevelBtn.classList.add("hidden");
         tryAgainBtn.classList.remove("hidden");
         tryAgainBtn.focus();
-    }
+    }  
+
+
 }
 
 function generateRandomNumber(length){
@@ -91,7 +93,7 @@ function runInterval(time){
             showNumberContainer.classList.add("hidden");
             enterNumberContainer.classList.remove("hidden");
             inputNumber.focus();
-            keyPressListerner();
+            addKeyUpToInput();
             progress.style.width = "150px";
         }else{
             progressWidth--;
@@ -100,10 +102,13 @@ function runInterval(time){
     },time);
 }
 
-function keyPressListerner(){
-    inputNumber.addEventListener('keyup', function(e){
-        if(e.keyCode == 13){
-            confirmBtn.click();
-        }
-    });
+function addKeyUpToInput(){
+    inputNumber.addEventListener('keyup', enterPress);
+}
+
+function enterPress(e) {
+    if(e.keyCode == 13) {
+        confirmBtn.click();
+        inputNumber.removeEventListener('keyup', enterPress);
+    }
 }
