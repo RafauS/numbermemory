@@ -1,3 +1,3 @@
 # numbermemory
 
-preview https://rafaus.000webhostapp.com/numbermemory/
+preview https://rafaus.github.io/numbermemory/
